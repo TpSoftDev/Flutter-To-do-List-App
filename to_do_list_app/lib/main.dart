@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
 import 'pages/profile.dart';
+import 'pages/settings.dart';
 
 // This is the entry point of the Flutter application
 void main() {
@@ -18,12 +19,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Removes the debug banner from top-right
+      debugShowCheckedModeBanner:
+          false, // Removes the debug banner from top-right
+      theme: ThemeData(
+        // Define your global AppBar theme
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromARGB(255, 220, 87, 87),
+          // You can add more AppBar properties here
+          titleTextStyle: TextStyle(fontSize: 20),
+        ),
+        // You can add other global theme properties here
+        // For example:
+        // buttonTheme: ButtonThemeData(...),
+        // colorScheme: ColorScheme(...),
+        // textTheme: TextTheme(...),
+      ),
       home: HomePage(),
       routes: {
         //Routes used to navigate between pages
         '/home': (context) => HomePage(),
         '/profile': (context) => ProfilePage(),
+        '/settings': (context) => SettingsPage(),
       },
     );
   }

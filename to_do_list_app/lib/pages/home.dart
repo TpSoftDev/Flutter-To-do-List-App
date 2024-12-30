@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'profile.dart';
+
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -9,15 +9,27 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Home Page",),
-        backgroundColor: const Color.fromARGB(255, 220, 87, 87),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Navigate to the Profile page
-            Navigator.pushNamed(context, '/profile');
-          },
-          child: Text("Go Profile Page "),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton( 
+              onPressed: () {
+                // Navigate to the Profile page
+                Navigator.pushNamed(context, '/profile');
+              },
+              child: Text("Go Profile Page "),
+              ),
+          SizedBox(height: 20),
+          ElevatedButton( 
+              onPressed: () {
+                // Navigate to the Profile page
+                Navigator.pushNamed(context, '/settings');
+              },
+              child: Text("Go Settings Page "),
+            ),
+          ],
         ),
       ),
     );
