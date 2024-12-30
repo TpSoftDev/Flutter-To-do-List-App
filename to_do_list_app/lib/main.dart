@@ -23,9 +23,8 @@ class MyApp extends StatelessWidget {
           false, // Removes the debug banner from top-right
       theme: ThemeData(
         // Define your global AppBar theme
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 220, 87, 87),
-          // You can add more AppBar properties here
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.red[400],
           titleTextStyle: TextStyle(fontSize: 20),
         ),
         // You can add other global theme properties here
