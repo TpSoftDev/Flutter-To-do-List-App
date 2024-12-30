@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'pages/home.dart';
 import 'pages/profile.dart';
 import 'pages/settings.dart';
+import 'pages/landing.dart';
 
 // This is the entry point of the Flutter application
 void main() {
@@ -27,15 +28,11 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.red[400],
           titleTextStyle: TextStyle(fontSize: 20),
         ),
-        // You can add other global theme properties here
-        // For example:
-        // buttonTheme: ButtonThemeData(...),
-        // colorScheme: ColorScheme(...),
-        // textTheme: TextTheme(...),
       ),
-      home: HomePage(),
+      home: LandingPage(),
       routes: {
         //Routes used to navigate between pages
+        '/landing': (context) => LandingPage(),
         '/home': (context) => HomePage(),
         '/profile': (context) => ProfilePage(),
         '/settings': (context) => SettingsPage(),
